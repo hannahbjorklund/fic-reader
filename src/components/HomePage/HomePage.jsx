@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import AppBar from "../AppBar/AppBar";
 import WorkStats from "../WorkStats/WorkStats";
 import WorkBody from "../WorkBody/WorkBody";
@@ -7,6 +7,8 @@ import ImportForm from "../ImportForm/ImportForm";
 export default function HomePage(){
     const headerRef = useRef(null);
     const [ficData, setFicData] = useState("");
+
+    useEffect(() => {document.title = 'Home'}, []);
   
     return (
       <div className="container">

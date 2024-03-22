@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import LoginForm from '../LoginForm/LoginForm';
 import { useHistory } from 'react-router-dom';
 
 function LoginPage() {
   const history = useHistory();
+  useEffect(() => {document.title = 'Login'}, []);
 
   return (
     <div>
